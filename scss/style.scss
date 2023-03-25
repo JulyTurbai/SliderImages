@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+.slider {
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 250px;
+    &__btn {
+        position: absolute;
+        top: 50%;
+        background: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        &_prev {
+            left: 20px;
+        }
+        &_next {
+            right: 20px
+        }
+        &_prev:hover {
+            background: rgb(176, 176, 211);
+        }
+        &_next:hover {
+            background: rgb(176, 176, 211);
+        }
+    }
+    &__dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__dot {
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin: 3px;
+        background: white;
+        &:hover {
+            background: orangered;
+        }
+        &_active {
+            background: orangered;
+        }
+    }
+}
+.slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    &_active {
+        opacity: 1;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        cursor: pointer;
+    }
+}
+
+.slide-window {
+    width: 1200px;
+    height: 800px;
+    position: absolute;
+    transform: translate(-155%);
+    bottom: -150px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 10;
+    &_active {
+        transform: translate(-20%);
+    }
+    img {
+        width: 1200px;
+        position: relative;
+    }
+}
+.window-button {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(138, 193, 245);
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: -130px;
+    right: -240px;
+    z-index: 10000;
+    color: black;
+    cursor: pointer;
+    opacity: 0;
+}
+.window-button_active {
+    opacity: 1;
+}
+.window-button_active:hover .window-button {
+    transform: translate(-20%);
+}
+.window-button:hover {
+    background: rgb(161, 161, 201);
+}
+
+
