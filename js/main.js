@@ -98,6 +98,7 @@ for(let i = 0; i < slide.length; i++) {
 WindomBut.onclick = function() {
     SlideWindow.classList.toggle('slide-window_active');
     WindomBut.classList.remove('window-button_active');
+    SlideWindow.innerHTML = '';
 }
 
 
