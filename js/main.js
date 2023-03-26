@@ -4,7 +4,7 @@ let slides = doc.querySelector('.slides');
 let btnPrev = doc.querySelector('#btn-prev');
 let btnNext = doc.querySelector('#btn-next');
 let SlideWindow = doc.querySelector('.slide-window');
-let WindomBut = doc.querySelector('.window-button');
+let WindowBut = doc.querySelector('.window-button');
 let dots = '';
 let currentSlide = 1;
 let slideEl = '';
@@ -91,13 +91,13 @@ for(let i = 0; i < slide.length; i++) {
         let index = this.dataset.index;
         SlideWindow.classList.add('slide-window_active');
         SlideWindow.innerHTML = `<img data-index = ${index} src="img/${imgs[currentSlide -1].big}" alt=""></img>`;
-        WindomBut.classList.add('window-button_active');
+        WindowBut.classList.add('window-button_active');
     }
 }
 
-WindomBut.onclick = function() {
+WindowBut.onclick = function() {
     SlideWindow.classList.toggle('slide-window_active');
-    WindomBut.classList.remove('window-button_active');
+    WindowBut.classList.remove('window-button_active');
     SlideWindow.innerHTML = '';
 }
 
